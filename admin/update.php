@@ -169,7 +169,7 @@ try {
                 handleImages($db, $pageId, $jsonData, $file['base']);
                 $statusMsg = ($status === 'new') ? "🌟 New Insert" : "🔄 Upadte(count +1)";
             } else {
-                $statusMsg = "✅ No changes"; // 변경 없을 경우 메시지만 출력
+                $statusMsg = "✅ No changes";
             }
 
             $db->commit();
@@ -178,7 +178,7 @@ try {
         } catch (Exception $e) {
             $db->rollBack();
             error_log("Error ! ::: [{$file['base']}] {$file['path']} - {$e->getMessage()}");
-            echo "❌ 실패 ::: [{$file['base']}] {$file['path']} - {$e->getMessage()}<br>";
+            echo "❌ Error ::: [{$file['base']}] {$file['path']} - {$e->getMessage()}<br>";
         }
     }
     echo "<br>::: page.json database insert Processing Complete!<br><br>";
