@@ -10,9 +10,14 @@ Notice.
 pjindex, pages, image table Index Data Reset
 
 SET FOREIGN_KEY_CHECKS = 0;
+
 TRUNCATE TABLE images;
+
 TRUNCATE TABLE pages;
+
 TRUNCATE TABLE pjindex;
+
 SET FOREIGN_KEY_CHECKS = 1;
+
 
 /admin/update.php 
