@@ -2,6 +2,8 @@
 // Include database connection settings file
 require_once 'admin/db_config.php'; 
 
+$pdo = getDBConnection(); 
+
 try {
     // Get the entered search term.
     $term = isset($_GET['term']) ? $_GET['term'] : '';
