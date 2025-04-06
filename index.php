@@ -301,10 +301,9 @@ $total_pages = ceil($total_results / $results_per_page);
     </table>
     </div>
    
-    <script>
+<script>
     $(function() {
-        // Set focus to the search input form when the page loads
-        // $("#search-input").focus(); // Disable input keyboard on mobile
+        // $("#search-input").focus(); 
 
         $("#search-input").autocomplete({
             source: "get_autocomplete.php",
@@ -315,7 +314,6 @@ $total_pages = ceil($total_results / $results_per_page);
                 return false;
             },
             focus: function(event, ui) {
-            // Prevent auto-selection when navigating with arrow keys
             return false;
             }
         });
@@ -343,7 +341,7 @@ $total_pages = ceil($total_results / $results_per_page);
     });
 
     document.addEventListener("contextmenu", function(event) {
-        event.preventDefault();  // Disable right-click
+        event.preventDefault(); 
     });
 
     document.addEventListener("keydown", function(event) {
@@ -353,17 +351,17 @@ $total_pages = ceil($total_results / $results_per_page);
             (event.ctrlKey && event.key === "u") ||
             (event.ctrlKey && event.key === "c")) { 
             event.preventDefault();
-            alert("This feature is not available!");
+            alert("이 기능은 사용할 수 없습니다!");
         }
     });
 
     document.addEventListener("copy", function(event) {
-        event.preventDefault();  // Prevent copying
-        alert("Text copying is prohibited!");
+        event.preventDefault();  
+        alert("텍스트 복사가 금지되었습니다!");
     });
 
     document.addEventListener("selectstart", function(event) {
-        event.preventDefault();  Text copying is prohibited!"
+        event.preventDefault();  
     });
 
     </script>
